@@ -106,10 +106,10 @@ export const parseTodos = async (
   for (const fileInfo of filesWithCache) {
     let todos = findAllTodosInFile(fileInfo)
     if (!showChecked) {
-      todos = todos.filter(todo => todo.checked != 'x')
+      todos = todos.filter(todo => todo.checked != 'x' && todo.checked != '-')
     }
     if (!showOther) {
-      todos = todos.filter(todo => todo.checked == ' ' || todo.checked == 'x')
+      todos = todos.filter(todo => todo.checked == ' ' || todo.checked == 'x' || todo.checked == '-')
     }
     todosForUpdatedFiles.set(fileInfo.file, todos)
   }

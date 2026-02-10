@@ -84,7 +84,7 @@ export const groupTodos = (
     }
 
   if (filterFullyComplete) {
-    const filtered = nonEmptyGroups.filter(group => !group.todos.every(todo => todo.checked === 'x'))
+    const filtered = nonEmptyGroups.filter(group => !group.todos.every(todo => todo.checked === 'x' || todo.checked === '-'))
     return [filtered, nonEmptyGroups.length - filtered.length]
   }
 

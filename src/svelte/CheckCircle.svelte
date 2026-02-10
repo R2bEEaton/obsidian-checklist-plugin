@@ -3,7 +3,7 @@
 </script>
 
 <div class="checkbox">
-  <div class={checked == 'x' ? 'checked' : (checked == '/' ? 'inprog' : '')} />
+  <div class={(checked == 'x' || checked =='-') ? 'checked' : (checked == '/' ? 'inprog' : '')} />
 </div>
 
 <style>
